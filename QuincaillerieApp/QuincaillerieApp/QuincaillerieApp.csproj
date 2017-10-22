@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1BEC97C-92EB-4968-8DC8-C6BCDB54195D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuincaillerieApp</RootNamespace>
+    <AssemblyName>QuincaillerieApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>ftp://ftp.rafajem.net23.net/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.rafajem.net23.net/QuincaillerieApp/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2F91406DD5BC8FD65DA2268A872A1AA39B7A590A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QuincaillerieApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="applicationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="client\Formafficheclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Formafficheclient.Designer.cs">
+      <DependentUpon>Formafficheclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client\Formajoutclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Formajoutclient.Designer.cs">
+      <DependentUpon>Formajoutclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client\FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client\Formmodifierclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client\Formmodifierclient.Designer.cs">
+      <DependentUpon>Formmodifierclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="credit\Formajoutercredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="credit\Formajoutercredit.Designer.cs">
+      <DependentUpon>Formajoutercredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="credit\Formcredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="credit\Formcredit.Designer.cs">
+      <DependentUpon>Formcredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="credit\Formpayercredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="credit\Formpayercredit.Designer.cs">
+      <DependentUpon>Formpayercredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataBase.cs" />
+    <Compile Include="fornisseur\Formmodifirfornisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fornisseur\Formmodifirfornisseur.Designer.cs">
+      <DependentUpon>Formmodifirfornisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fornisseur\Formaffichefornisseru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fornisseur\Formaffichefornisseru.Designer.cs">
+      <DependentUpon>Formaffichefornisseru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navigation.cs" />
+    <Compile Include="produit\FormaffichePoduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produit\FormaffichePoduit.Designer.cs">
+      <DependentUpon>FormaffichePoduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fornisseur\FormajoutFornisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fornisseur\FormajoutFornisseur.Designer.cs">
+      <DependentUpon>FormajoutFornisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produit\FormajoutProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produit\FormajoutProduit.Designer.cs">
+      <DependentUpon>FormajoutProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fornisseur\Formfornisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fornisseur\Formfornisseur.Designer.cs">
+      <DependentUpon>Formfornisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\ForminscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\ForminscriptionForm.Designer.cs">
+      <DependentUpon>ForminscriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produit\Formmodifierproduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produit\Formmodifierproduit.Designer.cs">
+      <DependentUpon>Formmodifierproduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vente\FormImpressionfacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vente\FormImpressionfacture.Designer.cs">
+      <DependentUpon>FormImpressionfacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vente\FormoperationsVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vente\FormoperationsVente.Designer.cs">
+      <DependentUpon>FormoperationsVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produit\Formproduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produit\Formproduit.Designer.cs">
+      <DependentUpon>Formproduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vente\Formvente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vente\Formvente.Designer.cs">
+      <DependentUpon>Formvente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vente\vente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vente\vente.Designer.cs">
+      <DependentUpon>vente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\VerificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\VerificationForm.Designer.cs">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="client\Formafficheclient.resx">
+      <DependentUpon>Formafficheclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\Formajoutclient.resx">
+      <DependentUpon>Formajoutclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client\Formmodifierclient.resx">
+      <DependentUpon>Formmodifierclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="credit\Formajoutercredit.resx">
+      <DependentUpon>Formajoutercredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="credit\Formcredit.resx">
+      <DependentUpon>Formcredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="credit\Formpayercredit.resx">
+      <DependentUpon>Formpayercredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fornisseur\Formaffichefornisseru.resx">
+      <DependentUpon>Formaffichefornisseru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fornisseur\Formmodifirfornisseur.resx">
+      <DependentUpon>Formmodifirfornisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produit\FormaffichePoduit.resx">
+      <DependentUpon>FormaffichePoduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fornisseur\FormajoutFornisseur.resx">
+      <DependentUpon>FormajoutFornisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produit\FormajoutProduit.resx">
+      <DependentUpon>FormajoutProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fornisseur\Formfornisseur.resx">
+      <DependentUpon>Formfornisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\ForminscriptionForm.resx">
+      <DependentUpon>ForminscriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produit\Formmodifierproduit.resx">
+      <DependentUpon>Formmodifierproduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vente\FormImpressionfacture.resx">
+      <DependentUpon>FormImpressionfacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vente\FormoperationsVente.resx">
+      <DependentUpon>FormoperationsVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produit\Formproduit.resx">
+      <DependentUpon>Formproduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vente\Formvente.resx">
+      <DependentUpon>Formvente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="vente\vente.resx">
+      <DependentUpon>vente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\VerificationForm.resx">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="applicationDataSet.xsc">
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="applicationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>applicationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="applicationDataSet.xss">
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QuincaillerieApp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
